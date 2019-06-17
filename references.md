@@ -31,7 +31,7 @@
 
 # References {#references}
 
-#### Books and Papers {#books-and-papers}
+### Books and Papers {#books-and-papers}
 
 [McConnell] _Code Complete: A Practical Handbook of Software Construction, Second Edition_, Steve McConnell, Microsoft, 2004, ISBN: 978-0735619678
 
@@ -53,7 +53,7 @@
 
 [MITRE] System Engineering Guide, MITRE, Page 192, Security Code Review
 
-#### Web {#web}
+### Web {#web}
 
 [Android] “Android Secure Coding Standard”, [https://wiki.sei.cmu.edu/confluence/display/android/Android+Secure+Coding+Standard](https://wiki.sei.cmu.edu/confluence/display/android/Android+Secure+Coding+Standard)
 
@@ -95,7 +95,7 @@
 
 [Witteman] “Secure Application Programming in the presence of Side Channel Attack”, Marc Witteman, [https://www.riscure.com/uploads/2018/11/201708_Riscure_Whitepaper_Side_Channel_Patterns.pdf](https://www.riscure.com/uploads/2018/11/201708_Riscure_Whitepaper_Side_Channel_Patterns.pdf)
 
-#### Firmware Specific {#firmware-specific}
+### Firmware Specific {#firmware-specific}
 
 [CapsuleRecovery] Yao, Zimmer, [A Tour Beyond BIOS- Capsule Update and Recovery in EDK II](https://github.com/tianocore-docs/Docs/raw/master/White_Papers/A_Tour_Beyond_BIOS_Capsule_Update_and_Recovery_in_EDK_II.pdf), [https://github.com/tianocore-docs/Docs/raw/master/White_Papers/A_Tour_Beyond_BIOS_Capsule_Update_and_Recovery_in_EDK_II.pdf](https://github.com/tianocore-docs/Docs/raw/master/White_Papers/A_Tour_Beyond_BIOS_Capsule_Update_and_Recovery_in_EDK_II.pdf)
 
@@ -144,9 +144,3 @@
 [http://download.microsoft.com/download/1/8/A/18A21244-EB67-4538-BAA2-1A54E0E490B6/WSMT.docx](http://download.microsoft.com/download/1/8/A/18A21244-EB67-4538-BAA2-1A54E0E490B6/WSMT.docx)
 
 [Variable] Yao, Zimmer, Zeng, A Tour Beyond BIOS Implementing UEFI Authenticated Variables in SMM with EDKII – Verion 2, [https://github.com/tianocore-docs/Docs/raw/master/White_Papers/A_Tour_Beyond_BIOS_Implementing_UEFI_Authenticated_Variables_in_SMM_with_EDKII_V2.pdf](https://github.com/tianocore-docs/Docs/raw/master/White_Papers/A_Tour_Beyond_BIOS_Implementing_UEFI_Authenticated_Variables_in_SMM_with_EDKII_V2.pdf)
-
-Authors
-
-**Jiewen Yao** (jiewen.yao@intel.com) is a Principal Engineer with Intel Architecture, Graphic and Software Group at Intel Corporation. He is security architect in EDK II BIOS. Jiewen is member of UEFI Security Sub-team and PI Security Sub-team in the UEFI Forum.
-
-**Vincent J. Zimmer** (vincent.zimmer@intel.com) is a Senior Principal Engineer with Intel Architecture, Graphic and Software Group at Intel Corporation. Vincent chairs the UEFI Security and Network Sub-teams in the UEFI Forum.
