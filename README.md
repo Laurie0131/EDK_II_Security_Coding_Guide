@@ -30,12 +30,14 @@
 -->
 <img src="media/TianocoreTitlePageLogo.jpg" width="300" />
 
+# EDK II Secure Coding Guide {#edk-ii-secure-coding-guide}
 
-#### Understanding the UEFI Secure Boot Chain {#understanding-uefi-secure-boot-chain}
+
+
 <!---
 ### {{ book.title }}
 -->
-##### WHITEPAPER
+##### Technical Briefing
 
 {% if book.draft %}
 ** DRAFT FOR REVIEW **
@@ -47,11 +49,13 @@
 #### Contributed by
 
 Jiewen Yao, Intel Corporation
-
 Vincent J. Zimmer, Intel Corporation
 
 
 
+
+### Special Acknowledgements
+This document checklist is collected based upon the security experience and previous security issue report. We would like to thank Sugumar Govindarajan, John Mathew, Kirk Brannock, and Karunakara Kotary of Intel Corporation, who provided the thought on hardening the platform.
 
 ### Acknowledgements
 
@@ -85,29 +89,10 @@ Copyright (c) 2019, Intel Corporation. All rights reserved.
 
 | Revision | Revision History | Date |
 | ---------- | ------------------ | ----------- |
-| 01.0 | Initial release. | May 2019|
+| 01.0 | Initial release. | June 2019|
 |  |  |  |
 
 
 <!--- end of README.md
 -->
-# EDK II Secure Coding Guide {#edk-ii-secure-coding-guide}
 
-_**EDK II Secure Coding Guide**_
-# EDK II Security Coding Guide {#edk-ii-security-coding-guide}
-
-**_EDK II Secure Coding Guide_**
-
-Jiewen Yao
-
-Intel Corporation
-
-Vincent J. Zimmer
-
-Intel Corporation
-
-June 2019
-
-### Acknowledgments {#acknowledgments}
-
-This document checklist is collected based upon the security experience and previous security issue report. We would like to thank Sugumar Govindarajan, John Mathew, Kirk Brannock, and Karunakara Kotary, who provided the thought on hardening the platform.
