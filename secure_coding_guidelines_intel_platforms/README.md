@@ -1,0 +1,1 @@
+# Secure Coding Guidelines: Intel Platforms {#secure-coding-guidelines-intel-platforms}
