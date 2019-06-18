@@ -1,7 +1,7 @@
 {
   "variables" : {
     "draft"   : "yes",
-    "title"   : "EDK II Security Coding GUide",
+    "title"   : "EDK II Secure Coding Guide",
     "version" : "Revision 01.0"
   },
 
