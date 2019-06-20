@@ -33,7 +33,7 @@
 
 Guidelines general
 
-## General {#general}
+### General {#general}
 
 **#GENERAL.1**: The code in trusted region MUST check any date from an untrusted region, such as a Portable and Executable (PE) image, capsule image, System Management Mode (SMM) communication buffer, Memory Mapped Input/Output (MMIO) Base Address Register (BAR), etc.
 
@@ -75,7 +75,7 @@ Guidelines general
 
 **#GENERAL.FAIL.2:** Once the check fails, the code MUST not provide hints to hackers (e.g., by disclosing information on failure). Don’t help an attacker with ‘guiding’ error messages.
 
-## ASSERT {#assert}
+### ASSERT {#assert}
 
 **#ASSERT.1**: ASSERT MUST be used for something that NEVER occurs. If something MIGHT occur, use ERROR HANDLING, please. Check function return values in a consumed API. (from Code Complete)
 
@@ -103,7 +103,7 @@ Guidelines general
 
 **#ASSERT.SHELL.1**: Shell MUST NOT use ASSERT for the resource request, or user input.
 
-## Deprecated API {#deprecated-api}
+### Deprecated API {#deprecated-api}
 
 **#DEPRECATEDAPI.1**: The code MUST not use any deprecated API.
 
@@ -132,7 +132,7 @@ Table 1.1 EDK II Deprecated APIs
 | UefiLib | GetVariable | GetVariable2 |
 |  | GetEfiGlobalVariable | GetEfiGlobalVariable2 |
 
-## Race Condition {#race-condition}
+### Race Condition {#race-condition}
 
 **#RACECONDITION.1**: The code MUST be careful of Time-of-Check/Time-of-Use (TOC/TOU) attack for the data crossing a trusted region, such as flash region access, SMM communication buffer access. The right way is to copy the data from an untrusted region to a trusted region and only access the data in the trusted region.
 
@@ -146,7 +146,7 @@ Table 1.1 EDK II Deprecated APIs
 
 **#POLICY.WHITELIST.1:** If an allowed list is used, any error on getting allowed list data MUST cause verification failure.
 
-## Environment {#environment}
+### Environment {#environment}
 
 **#ENVIRONMENT.RUNTIME.1**: The runtime module MUST be built with 4K alignment so that a Runtime image can be protected by the OS. ([SecurityEnhancement](https://www.gitbook.com/book/edk2-docs/a-tour-beyond-bios-mitigate-buffer-overflow-in-ue/details))
 
@@ -172,7 +172,7 @@ Table 1.1 EDK II Deprecated APIs
 
 **#ENVIRONMENT.CONTROLFLOW.1**: Control Flow Guard MAY be enabled to prevent Return Oriented Program (ROP), Call Oriented Program (COP)/Jump Oriented Program (JOP) attack. ([CET EDKII](https://github.com/tianocore/tianocore.github.io/wiki/CET-in-SMM))
 
-## Crypto {#crypto}
+### Crypto {#crypto}
 
 **#CRYPTO.1**: A platform SHOULD NOT use any deprecated crypto-algorithm.
 
@@ -194,7 +194,7 @@ Table 1.1 EDK II Deprecated APIs
 
 **#CRYPTO.RANDOM.1**: A platform SHOULD use an approved random number generator.
 
-## Password {#password}
+### Password {#password}
 
 **#PASSWORD.1**: The password plaintext MUST NOT be saved to a variable. Alternative: 1) save SALT+HASH to a variable, 2) save to Hardware directly, 3) save to System Management RAM (SMRAM) for S3.
 
@@ -214,7 +214,7 @@ Table 1.1 EDK II Deprecated APIs
 
 **#PASSWORD.9**: Hash generation MUST add enough iteration to make sure the hash calculation is slow.
 
-## Secret {#secret}
+### Secret {#secret}
 
 **#SECRET.1**: The secret MUST NOT be saved in a variable or disk directly as plain text. The secret includes but is not limited to the user password, hard drive password, Trusted Computing Group (TCG) OPAL password, or Trusted Platform Module (TPM) platform author value, network password, or private certificate password.
 
@@ -226,7 +226,7 @@ Table 1.1 EDK II Deprecated APIs
 
 **#SECRET.5**: The length of the secret MUST be large enough to resist a brute force attack.
 
-## Network {#network}
+### Network {#network}
 
 **#NETWORK.1**: The network driver MUST always validate the packet from the network. Don’t trust any length, size, offset field.
 
@@ -238,11 +238,11 @@ Table 1.1 EDK II Deprecated APIs
 
 **#NETWORK.WIFI.1**: The WIFI password plain text MUST NOT be stored to readable flash region.
 
-## Hardware {#hardware}
+### Hardware {#hardware}
 
 **#HARDWARE.1**: The untrusted input from hardware MUST be verified, such as Dual-Inline-Memory-Modules (DIMM) Serial Presence Detect (SPD) data, Universal Serial Bus (USB) descriptor, Bluetooth Low Energy (BLE) advisory information, etc.
 
-## DMA {#dma}
+### DMA {#dma}
 
 **#DMA.1**: The device Direct Memory Access (DMA) MUST be disabled by default, either via Peripheral Component Interconnect (PCI) Bus Master Enable (BME) or Input/Output Memory Management Unit (IOMMU) engine. ([IOMMU EDK II](https://firmware.intel.com/sites/default/files/Intel_WhitePaper_Using_IOMMU_for_DMA_Protection_in_UEFI.pdf))
 
@@ -256,7 +256,7 @@ Table 1.1 EDK II Deprecated APIs
 
 **#DMA.6**: The DMA in a debug device in debug image MAY be enabled at all times.
 
-## Other {#other}
+### Other {#other}
 
 **#SIDECHANNEL.1:** The high privilege code (SMM) MUST use SpeculationBarrier() after validation of untrusted data but before use to mitigate [Bounds Check Bypass](https://software.intel.com/security-software-guidance/software-guidance/bounds-check-bypass). (SideChannel)
 
