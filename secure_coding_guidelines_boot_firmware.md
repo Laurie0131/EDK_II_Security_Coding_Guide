@@ -31,13 +31,13 @@
 
 # Secure Coding Guidelines: Boot Firmware {#secure-coding-guidelines-boot-firmware}
 
-### Flash {#flash}
+## Flash {#flash}
 
 **#FLASH.1**: The platform MUST lock flash part no later than EndOfDxe.
 
 **#FLASH.2**: The flash lock MUST happen in all boot mode (normal, S3, S4, capsule update, recovery, etc).
 
-### Flash Update {#flash-update}
+## Flash Update {#flash-update}
 
 **#FLASH.UPDATE.1**: Firmware Flash Update MUST check the integrity of a new Firmware image. ([CapsuleRecovery](https://github.com/tianocore-docs/Docs/raw/master/White_Papers/A_Tour_Beyond_BIOS_Capsule_Update_and_Recovery_in_EDK_II.pdf))
 
@@ -93,7 +93,7 @@
 
 **#VARIABLE.CONFIDENTIALITY.2**: The encryption and decryption MUST be in a secure execution environment, such as SMM.
 
-### S3 {#s3}
+## S3 {#s3}
 
 **#S3.1**: S3 BootScript MUST be saved in a secure place (lockbox) ([S3Resume](https://github.com/tianocore-docs/Docs/raw/master/White_Papers/A_Tour_Beyond_BIOS_Implementing_S3_resume_with_EDKII_V2.pdf))
 
@@ -103,7 +103,7 @@
 
 **#S3.4**: S3 configuration data (memory, chipset) MUST be saved in a secure place (ReadOnly variable, SMM).
 
-### Secure Boot {#secure-boot}
+## Secure Boot {#secure-boot}
 
 **#SECUREBOOT.1**: Platform MUST NOT provide a way to disable secure boot without authentication.
 
@@ -123,7 +123,7 @@
 
 **#SECUREBOOT.Key.1**: If signing verification is required, the public key or hash MUST be stored in hardware, or boot block or UEFI authenticated variable.
 
-### TCG {#tcg}
+## TCG {#tcg}
 
 **#TCG.1**: If TCG trusted boot is enabled, a platform MUST do measurement following the TCG specification. ([TPM2 EDK II](https://firmware.intel.com/sites/default/files/resources/A_Tour_Beyond_BIOS_Implementing_TPM2_Support_in_EDKII.pdf))
 
@@ -163,13 +163,13 @@
 
 **#TCG.TPM.5**: If S3 Startup(STATE) fails, the platform MUST send Startup(Clear) and extend error code to PCRs.
 
-### Option ROM {#option-rom}
+## Option ROM {#option-rom}
 
 **#OROM.1**: Any 3<sup>rd</sup> party option ROM MUST NOT be dispatched before EndOfDxe. The 3<sup>rd</sup> party option ROM means a PCI option ROM on the 3<sup>rd</sup> party PCI card. If a PCI option ROM is integrated inside of the firmware, it is NOT considered as a 3<sup>rd</sup> party option ROM and it MAY be dispatched before EndOfDxe.
 
 **#OROM.2**: Platform BDS MUST handle the deferred PCI option ROM after EndOfDxe.
 
-### Console {#console}
+## Console {#console}
 
 **#CONSOLE.1**: A trusted console SHOULD be available before EndOfDxe, based upon the need. A trusted console means: 1) Integrated device such as a PS2/USB keyboard/mouse without any option ROM, 2) A chipset-integrated video card which is welded to the board and whose driver is inside of the boot firmware instead of in a PCI option ROM, 3) A 3<sup>rd</sup> party video card which is welded to the board and whose driver is inside of the boot firmware instead of in a PCI Option ROM.
 
@@ -177,7 +177,7 @@
 
 **#CONSOLE.3**: If a remote console is used, additional authentication MAY be used, such as user password.
 
-### Storage {#storage}
+## Storage {#storage}
 
 **#STORAGE.1**: A platform MUST connect trusted storage device before EndOfDxe, based upon the need. A trusted storage means:
 
@@ -191,7 +191,7 @@
 
 **#STORAGE.4**: A platform MUST disable the DMA on the storage if it is not a boot device. (Disconnect Device)
 
-### Silicon {#silicon}
+## Silicon {#silicon}
 
 **#SILICON.1**: The lockable silicon register MUST be locked before EndOfDxe, include SMRAM, Flash, Top Swap, Remap Bar, etc
 
